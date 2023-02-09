@@ -34,6 +34,7 @@ Edit the lcd_menu.cfg file and check to make sure the menus you want enabled are
   + Offset Z:00.00
   + Flow: 000%
   + Speed: 000%
+  + Fan speed: 000%
   + Retraction
   + Pressure Advance
   + Machine Limits
