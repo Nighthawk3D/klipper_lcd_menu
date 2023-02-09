@@ -4,7 +4,9 @@ A custom menu system for LCD displays on klipper such as a 12864LCD screen.
 
 ## InstalL
 
-`mkdir -p $HOME/printer_data/config/menu && git clone https://github.com/DasBurninator/klipper_lcd_menu $HOME/printer_data/config/lcd_menu`
+```
+mkdir -p $HOME/printer_data/config/menu && git clone https://github.com/DasBurninator/klipper_lcd_menu $HOME/printer_data/config/lcd_menu
+```
 
 Add the following to printer.cfg:
 
