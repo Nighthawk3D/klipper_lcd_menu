@@ -45,12 +45,12 @@ managed_services: klipper
 + Prep (Disabled When Printing)
   + Prep ABS
   + Prep PLA
-  + Z Tilt > Park
-  + QGL > Park
-  + Park
-  + Park Rear
+  + Z Tilt > Park (If Z-TILT is enabled)
+  + QGL > Park (If QUAD_GANTRY_LEVELING is enabled)
+  + Park (Parks toolhead in center of the bed)
+  + Park Rear (Parks toolhead center rear of the bed)
 + Print (Enabled During Printing)
-  + Resume printing
+  + Resume printing (Enabled when Paused)
   + Pause printing (Enabled During Printing)
   + Cancel printing (Enabled During Printing)
 + Tune (Enabled During Printing)
@@ -113,11 +113,6 @@ managed_services: klipper
   + Unload Filament
   + Purge Filament
   + Feed: 000.0
-+ Setup
-  + Save config
-  + Restart
-    + Restart host
-    + Restart FW
 + Calibration (Disabled When Printing)
   + Probe Calibration
     + Probe
@@ -130,11 +125,16 @@ managed_services: klipper
     + Ex0 PID
     + Bed PID
     + Save Config
-+ Network
-  + mDNS
-  + Eth IP
-  + Wifi SSID
-  + Wifi IP
++ System
+  + Save config
+  + Restart
+    + Restart host
+    + Restart FW
+  + Network
+    + mDNS
+    + Eth IP
+    + Wifi SSID
+    + Wifi IP
 
 ## Changelog
 
@@ -162,3 +162,4 @@ managed_services: klipper
 + Finish Calibration Menu
 + Add in klipper connection status in System menu
 + Add Z offset calibration menu
++ Impliment emergency stop
