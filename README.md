@@ -45,15 +45,14 @@ managed_services: klipper
 + Prep (Disabled When Printing)
   + Prep ABS
   + Prep PLA
-  + Home
   + Z Tilt > Park
   + QGL > Park
   + Park
   + Park Rear
 + Print (Enabled During Printing)
   + Resume printing
-  + Pause printing
-  + Cancel printing
+  + Pause printing (Enabled During Printing)
+  + Cancel printing (Enabled During Printing)
 + Tune (Enabled During Printing)
   + Offset Z:00.00
   + Flow: 000%
@@ -89,6 +88,9 @@ managed_services: klipper
   + Steppers off
   + Fan: OFF
   + Fan speed: 000%
+  + KlickyProbe
+    + Attach Probe
+    + Dock Probe
 + Temperature
   + Ex0:000 (0000)
   + Ex1:000 (0000)
@@ -116,15 +118,13 @@ managed_services: klipper
   + Restart
     + Restart host
     + Restart FW
-  + PID tuning
-    + Tune Hotend PID
-    + Tune Hotbed PID
-+ Calibration
++ Calibration (Disabled When Printing)
   + PID Tune
     + PID Tune ABS (tunes both bed and extruder for ABS temps)
     + PID Tune PLA (tunes both bed and extruder for PLA temps)
-    + Tune Hotend PID
-    + Tune Hotbed PID
+    + Ex0 PID
+    + Bed PID
+    + Save Config
 + Network
   + mDNS
   + Eth IP
