@@ -155,6 +155,9 @@ managed_services: klipper
   + Stealthburner light menu with basic control over nozzle LEDs and Logo light
   + Moved caselight from Control menu
   + Made light macros conditional to the macros existing
+### Feb 9th 2023
++ Fixed Pressure Advance menu not displaying
++ Fixed Network menu not displaying
 
 ## TODO
 + Modify Filament Load/Unload/Purge to not rely on a script
