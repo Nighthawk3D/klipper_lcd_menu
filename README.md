@@ -10,7 +10,7 @@ To utilize the network-status menus you will need to first install the plugin. I
 ## InstalL
 
 ```
-mkdir -p $HOME/printer_data/config/menu && git clone https://github.com/DasBurninator/klipper_lcd_menu $HOME/printer_data/config/lcd_menu
+mkdir -p $HOME/printer_data/config/lcd_menu && git clone https://github.com/DasBurninator/klipper_lcd_menu $HOME/printer_data/config/lcd_menu
 ```
 
 Add the following to `printer.cfg`:
