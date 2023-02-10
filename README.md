@@ -159,12 +159,12 @@ managed_services: klipper
   + Stealthburner light menu with basic control over nozzle LEDs and Logo light
   + Moved caselight from Control menu
   + Made light macros conditional to the macros existing
-  + Fixed KlickyProbe menu options and created a conditional to QGL or Z-Tilt prior to bedmesh if printer is equiped.
 
 ### Feb 9th 2023
 
 + Fixed Pressure Advance menu not displaying
 + Fixed Network menu not displaying
+  + Fixed KlickyProbe menu options and created a conditional to QGL or Z-Tilt prior to bedmesh if printer is equiped.
 
 ## TODO
 
