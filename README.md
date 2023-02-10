@@ -119,6 +119,11 @@ managed_services: klipper
     + Restart host
     + Restart FW
 + Calibration (Disabled When Printing)
+  + Probe Calibration
+    + Probe
+    + Probe Accuracy
+    + Probe Calibrate
+  + Delta Calibration
   + PID Tune
     + PID Tune ABS (tunes both bed and extruder for ABS temps)
     + PID Tune PLA (tunes both bed and extruder for PLA temps)
@@ -156,3 +161,4 @@ managed_services: klipper
 + Add BLtouch menu item under Control > BLTouch
 + Finish Calibration Menu
 + Add in klipper connection status in System menu
++ Add Z offset calibration menu
