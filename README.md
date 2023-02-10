@@ -142,3 +142,7 @@ managed_services: klipper
   + Added Homing menu and moved Home/Z-tilt/QGL/etc into this menu
   + Added Move menu and moved Move 0.1mm/1mm/10mm menus under this
   + Disabled Lighting Controls
+
+## TODO
++ Modify Filament Load/Unload/Purge to not rely on a script
++ Add BLtouch menu item under Control > BLTouch
