@@ -61,7 +61,7 @@ managed_services: klipper
   + Flow: 000%
   + Speed: 000%
   + Fan speed: 000%
-  + Retraction
+  + Retraction (firmware_retraction must be enabled)
   + Pressure Advance
   + Machine Limits
 + Control (Disabled When Printing)
@@ -174,3 +174,4 @@ managed_services: klipper
 + Add Z offset calibration menu
 + Impliment emergency stop
 + Create conditional parking menu under the Prep Menu that works for Delta printers as well.
++ Make Prep ABS and Prep PLA options not reliant on macros
