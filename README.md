@@ -1,6 +1,8 @@
 # Klipper LCD Menu
 
 A custom menu system for LCD displays on klipper such as a 12864LCD screen.
+Intended to extend the functionality beyond the default klipper LCD menu provides, while being printer agnostic.
+Layout is organized into what I would consider a more logical workflow.
 
 ## InstalL
 
@@ -12,31 +14,22 @@ Add the following to `printer.cfg`:
 
 `[include ./lcd_menu/lcd_menu.cfg]`
 
-Edit the lcd_menu.cfg file and check to make sure the menus you want enabled are uncommented.
-
-```
-[include ./prep_menu.cfg]                       ## Enables Prep menu
-[include ./lights_menu.cfg]                     ## Enables Lights menu
-[include ./klickyprobe_menu.cfg]                ## Enables KlickyProbe menu
-[include ./retraction_menu.cfg]                 ## Enables Firmware Retraction menu
-[include ./pressure_advance_menu.cfg]           ## Enables Pressure Advance Tuning menu
-[include ./printer_limits_menu.cfg]             ## Enables Printer Limites Menu
-[include ./disable_delta_menu.cfg]              ## Disables delta pecific menu options
-[include ./network_menu.cfg]                    ## Enables Network Status menu from klipper_network_status plugin. Must have plugin installed from # https://github.com/JeremyRuhland/klipper_network_status
-```
-
 ## Updates
+
 ### Manual Update
+
 ```
 cd $HOME/printer_data/config/
 git pull
 ```
 
 ### Moonraker Update Manager
+
 Updates require that Moonraker is run in debug mode for unofficial repos. See the Moonraker documentation below:
 [Enabling debug mode in Moonraker](https://moonraker.readthedocs.io/en/latest/installation/#the-environment-file)
 
 Once Moonraker is running in debug mode the follow can be added to the `moonraker.conf file`
+
 ```
 [update_manager client klipper_lcd_menu]
 type: git_repo
@@ -50,6 +43,13 @@ managed_services: klipper
 ## Menu Layout
 
 + Prep (Disabled When Printing)
+  + Prep ABS
+  + Prep PLA
+  + Home
+  + Z Tilt > Park
+  + QGL > Park
+  + Park
+  + Park Rear
 + Print (Enabled During Printing)
   + Resume printing
   + Pause printing
@@ -124,3 +124,16 @@ managed_services: klipper
       + Abort
     + Bed probe
   + Dump parameters
++ Network
+  + mDNS
+  + Eth IP
+  + Wifi SSID
+  + Wifi IP
+
+## Changelog
+
+### Feb 9th 2023
+
++ Initial set of commits and debugging
++ Moved network_status menu into lcd_menu.cfg and enabled conditionally
++ firmware_retraction and pressure_advance tuning menus now conditional of those options being enabled.
