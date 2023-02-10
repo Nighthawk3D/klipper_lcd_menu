@@ -1,8 +1,11 @@
 # Klipper LCD Menu
 
 A custom menu system for LCD displays on klipper such as a 12864LCD screen.
-Intended to extend the functionality beyond the default klipper LCD menu provides, while being printer agnostic.
+Intended to extend the functionality beyond the default klipper LCD menu provides, while being printer and configuration agnostic.
 Layout is organized into what I would consider a more logical workflow.
+
+To utilize the network-status menus you will need to first install the plugin. If this plugin isn't installed the menu will be hidden.
+[https://github.com/JeremyRuhland/klipper_network_status](https://https://github.com/JeremyRuhland/klipper_network_status)
 
 ## InstalL
 
@@ -130,7 +133,7 @@ managed_services: klipper
   + Restart
     + Restart host
     + Restart FW
-  + Network
+  + Network (Requires network-status plugin from https://github.com/JeremyRuhland/klipper_network_status)
     + mDNS
     + Eth IP
     + Wifi SSID
@@ -139,6 +142,7 @@ managed_services: klipper
 ## Changelog
 
 ### Feb 9th 2023
+
 + Initial set of commits and debugging
 + Added network_status plugin menu options (conditional that plugin is enabled)
 + firmware_retraction and pressure_advance tuning menus now conditional of those options being enabled.
@@ -155,14 +159,18 @@ managed_services: klipper
   + Stealthburner light menu with basic control over nozzle LEDs and Logo light
   + Moved caselight from Control menu
   + Made light macros conditional to the macros existing
+
 ### Feb 9th 2023
+
 + Fixed Pressure Advance menu not displaying
 + Fixed Network menu not displaying
 
 ## TODO
-+ Modify Filament Load/Unload/Purge to not rely on a script
+
++ Modify Filament Load/Unload/Purge to not rely on a set of macros
 + Add BLtouch menu item under Control > BLTouch
 + Finish Calibration Menu
 + Add in klipper connection status in System menu
 + Add Z offset calibration menu
 + Impliment emergency stop
++ Create conditional parking menu under the Prep Menu that works for Delta printers as well.
