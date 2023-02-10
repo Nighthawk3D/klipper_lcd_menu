@@ -63,27 +63,32 @@ managed_services: klipper
   + Pressure Advance
   + Machine Limits
 + Control (Disabled When Printing)
-  + Home All
-  + Home Z
-  + Home X/Y
+  + Homing
+    + Home All
+    + Home Z
+    + Home X/Y
+    + Z Tilt
+    + Quad Gantry Lvl
+    + Bed Mesh
+  + Move
+    + Move 10mm
+      + Move X:000.0
+      + Move Y:000.0
+      + Move Z:000.0
+      + Move E:+000.0
+    + Move 1mm
+      + Move X:000.0
+      + Move Y:000.0
+      + Move Z:000.0
+      + Move E:+000.0
+    + Move 0.1mm
+      + Move X:000.0
+      + Move Y:000.0
+      + Move Z:000.0
+      + Move E:+000.0
   + Steppers off
   + Fan: OFF
   + Fan speed: 000%
-  + Move 10mm
-    + Move X:000.0
-    + Move Y:000.0
-    + Move Z:000.0
-    + Move E:+000.0
-  + Move 1mm
-    + Move X:000.0
-    + Move Y:000.0
-    + Move Z:000.0
-    + Move E:+000.0
-  + Move 0.1mm
-    + Move X:000.0
-    + Move Y:000.0
-    + Move Z:000.0
-    + Move E:+000.0
 + Temperature
   + Ex0:000 (0000)
   + Ex1:000 (0000)
@@ -131,5 +136,9 @@ managed_services: klipper
 ### Feb 9th 2023
 
 + Initial set of commits and debugging
-+ Moved network_status menu into lcd_menu.cfg and enabled conditionally
++ Added network_status plugin menu options (conditional that plugin is enabled)
 + firmware_retraction and pressure_advance tuning menus now conditional of those options being enabled.
++ Completely reorganized the Control Menu
+  + Added Homing menu and moved Home/Z-tilt/QGL/etc into this menu
+  + Added Move menu and moved Move 0.1mm/1mm/10mm menus under this
+  + Disabled Lighting Controls
