@@ -134,7 +134,6 @@ managed_services: klipper
 ## Changelog
 
 ### Feb 9th 2023
-
 + Initial set of commits and debugging
 + Added network_status plugin menu options (conditional that plugin is enabled)
 + firmware_retraction and pressure_advance tuning menus now conditional of those options being enabled.
@@ -142,6 +141,15 @@ managed_services: klipper
   + Added Homing menu and moved Home/Z-tilt/QGL/etc into this menu
   + Added Move menu and moved Move 0.1mm/1mm/10mm menus under this
   + Disabled Lighting Controls
++ Removed Setup menu
++ Added Calibration Menu
+  + Delta Calibration under its own menu
+  + Probe Calibration menu added with multiple probing options
+  + Added Bedmesh menu item
++ Added Lights Menu
+  + Stealthburner light menu with basic control over nozzle LEDs and Logo light
+  + Moved caselight from Control menu
+  + Made light macros conditional to the macros existing
 
 ## TODO
 + Modify Filament Load/Unload/Purge to not rely on a script
