@@ -114,16 +114,12 @@ managed_services: klipper
   + PID tuning
     + Tune Hotend PID
     + Tune Hotbed PID
-  + Calibration
-    + Delta cal. auto
-    + Delta cal. man
-      + Start probing
-      + Move Z: 000.00
-      + Test Z: ++
-      + Accept
-      + Abort
-    + Bed probe
-  + Dump parameters
++ Calibration
+  + PID Tune
+    + PID Tune ABS (tunes both bed and extruder for ABS temps)
+    + PID Tune PLA (tunes both bed and extruder for PLA temps)
+    + Tune Hotend PID
+    + Tune Hotbed PID
 + Network
   + mDNS
   + Eth IP
