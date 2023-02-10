@@ -146,3 +146,5 @@ managed_services: klipper
 ## TODO
 + Modify Filament Load/Unload/Purge to not rely on a script
 + Add BLtouch menu item under Control > BLTouch
++ Finish Calibration Menu
++ Add in klipper connection status in System menu
