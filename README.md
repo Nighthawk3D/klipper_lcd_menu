@@ -5,7 +5,7 @@ Intended to extend the functionality beyond the default klipper LCD menu provide
 Layout is organized into what I would consider a more logical workflow.
 
 To utilize the network-status menus you will need to first install the plugin. If this plugin isn't installed the menu will be hidden.
-[https://github.com/JeremyRuhland/klipper_network_status](https://https://github.com/JeremyRuhland/klipper_network_status)
+[https://github.com/JeremyRuhland/klipper_network_status](https://github.com/JeremyRuhland/klipper_network_status)
 
 ## InstalL
 
