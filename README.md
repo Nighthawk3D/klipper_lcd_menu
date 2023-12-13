@@ -10,7 +10,8 @@ To utilize the network-status menus you will need to first install the plugin. I
 ## InstalL
 
 ```
-mkdir -p $HOME/printer_data/config/lcd_menu && git clone https://github.com/DasBurninator/klipper_lcd_menu $HOME/printer_data/config/lcd_menu
+git clone https://github.com/DasBurninator/klipper_lcd_menu
+ln -s ~/klipper_lcd_menu ~/printer_data/config/lcd_menu
 ```
 
 Add the following to `printer.cfg`:
@@ -22,7 +23,7 @@ Add the following to `printer.cfg`:
 ### Manual Update
 
 ```
-cd $HOME/printer_data/config/
+cd ~/klipper_lcd_menu
 git pull
 ```
 
@@ -38,7 +39,7 @@ Once Moonraker is running in debug mode the follow can be added to the `moonrake
 type: git_repo
 channel: dev
 primary_branch: main
-path: ~/printer_data/config/lcd_menu
+path: ~/klipper_lcd_menu
 origin: https://github.com/DasBurninator/klipper_lcd_menu
 managed_services: klipper
 ```
@@ -140,6 +141,10 @@ managed_services: klipper
     + Wifi IP
 
 ## Changelog
+
+### Dec 12th 2023
++ Added lcd_tweaks.cfg
++ Updated Install and update instructions in README.md
 
 ### Feb 9th 2023
 
