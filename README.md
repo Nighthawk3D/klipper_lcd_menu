@@ -1,5 +1,7 @@
 # Klipper LCD Menu
 
+## SEE CHANGELOG FOR RECENT BREAKING CHANGES
+
 A custom menu system for LCD displays on klipper such as a 12864LCD screen.
 Intended to extend the functionality beyond the default klipper LCD menu provides, while being printer and configuration agnostic.
 Layout is organized into what I would consider a more logical workflow.
@@ -7,16 +9,18 @@ Layout is organized into what I would consider a more logical workflow.
 To utilize the network-status menus you will need to first install the plugin. If this plugin isn't installed the menu will be hidden.
 [https://github.com/JeremyRuhland/klipper_network_status](https://github.com/JeremyRuhland/klipper_network_status)
 
-## InstalL
+## Install
 
 ```
+cd ~
 git clone https://github.com/DasBurninator/klipper_lcd_menu
 ln -s ~/klipper_lcd_menu ~/printer_data/config/lcd_menu
+cp ~/klipper_lcd_menu/lcd_menu_settings.cfg ~/printer_data/config/
 ```
 
 Add the following to `printer.cfg`:
 
-`[include ./lcd_menu/lcd_menu.cfg]`
+`[include lcd_menu_settings.cfg]`
 
 ## Updates
 
@@ -141,6 +145,19 @@ managed_services: klipper
     + Wifi IP
 
 ## Changelog
+
+### Jan 29th 2024
+Major rework. Will require reinstall!!
+
+If you have previously defined `display_group: __voron_display` under the `[display]` section, you will need to remove this, as it is now defined automatically to allow for less config needed on the users' side.
+
+Only one file now needed to be included in the printer.cfg.
+
++ Steamlined user install/config experience.
++ Added variable system to enable and disable certain settings. Borrowed from https://github.com/jschuh/klipper-macros
++ lcd_tweaks from Voron docs modified to accomodate variables for serial number input
++ lcd_tweaks now enabled by default without users needing to add additional configuration to the `[display]` section of thier config
++ All above changes will allow for less disruptive upgrades in the future as well.
 
 ### Dec 12th 2023
 + Added lcd_tweaks.cfg
