@@ -22,6 +22,8 @@ Add the following to `printer.cfg`:
 
 `[include lcd_menu_settings.cfg]`
 
+Make any edits needed to the lcd_menu_settings.cfg
+
 ## Updates
 
 ### Manual Update
@@ -155,6 +157,7 @@ Only one file now needed to be included in the printer.cfg.
 
 + Steamlined user install/config experience.
 + Added variable system to enable and disable certain settings. Borrowed from https://github.com/jschuh/klipper-macros
++ SD Card and Octoprint menu options can now be enabled throug the variables mentioned above. They are disabeld by default
 + lcd_tweaks from Voron docs modified to accomodate variables for serial number input
 + lcd_tweaks now enabled by default without users needing to add additional configuration to the `[display]` section of thier config
 + All above changes will allow for less disruptive upgrades in the future as well.
