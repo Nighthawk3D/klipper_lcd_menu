@@ -13,7 +13,7 @@ To utilize the network-status menus you will need to first install the plugin. I
 
 ```
 cd ~
-git clone https://github.com/DasBurninator/klipper_lcd_menu
+git clone https://github.com/Nighthawk3D/klipper_lcd_menu
 ln -s ~/klipper_lcd_menu ~/printer_data/config/lcd_menu
 cp ~/klipper_lcd_menu/lcd_menu_settings.cfg ~/printer_data/config/
 ```
@@ -46,7 +46,7 @@ type: git_repo
 channel: dev
 primary_branch: main
 path: ~/klipper_lcd_menu
-origin: https://github.com/DasBurninator/klipper_lcd_menu
+origin: https://github.com/Nighthawk3D/klipper_lcd_menu
 managed_services: klipper
 ```
 
